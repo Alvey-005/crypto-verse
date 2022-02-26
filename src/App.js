@@ -3,9 +3,10 @@ import {Navbar} from './components';
 import {Routes ,Link,Route} from 'react-router-dom';
 import {Layout,Space,Typography} from 'antd';
 import {HomePage,Exchanges,Cryptocurrencies,CryptoDetails} from './pages';
+import { MoneyCollectOutlined , BulbOutlined , FundOutlined , MenuOutlined,HomeOutlined  } from '@ant-design/icons/lib/icons';
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <div className='navbar'>
       <Navbar />
       </div>
@@ -20,11 +21,23 @@ function App() {
            </Routes>
          </div>
        </Layout>
-     </div>
      <div className='footer'>
+       <Typography.Title level = {5} style = {{color:'white',textAlign:'center'}}>
+        CryptoVerse <br />
+        All rights reserved
+       </Typography.Title>
+       <Space>
+         <Link to = '/'><HomeOutlined/></Link>
+         <Link to = '/exchanges'><MoneyCollectOutlined/></Link>
+         <Link to = '/news'><BulbOutlined/></Link>
+         <Link to = '/cryptocurrencies'><FundOutlined/></Link>
+
+       </Space>
        
      </div>
     </div>
+    </div>
+
   );
 }
 
